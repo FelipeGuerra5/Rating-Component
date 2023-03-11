@@ -10,7 +10,7 @@ rateBtns.forEach((item) => item.addEventListener('click', (i) => {
 function rateSubmited(rate) {
     console.log(rate)
     sessionStorage.setItem("rate", JSON.stringify(rate))
-    window.location.href = '/views/submited.html'
+    window.location.href = 'Rating-Component/views/submited.html'
 }
 
 const submitBtn = document.querySelector('button.submit-btn')
