@@ -81,6 +81,9 @@ p.thanks-p {
     font-size: 13px; text-align: center;
     margin-top: 10px;
     color: var(--Light-Grey);
+    width: 360px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .attribution a { 
@@ -88,16 +91,91 @@ p.thanks-p {
 }
 
 
-@media screen {
-    main{
-        width: 365px;
-        height: 365px
-    }
-
-    .attribution{
+@media screen and (max-width: 375px) and (orientation: portrait) {
+        
+    body{
+        height: 100%;
+        margin: 0%;
+        padding: 0%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--Very-Dark-Blue);
+    }
+    
+    main {
+        width: 304px;
+        height: 304px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .selector {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .rate {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .submit-btn {
+        height: 40px;
+    }
 
-        justify-content: space-evenly;
+    .attribution {
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-height: 375px) and (orientation: landscape) {
+        
+    body{
+        height: 390px;
+    }
+    
+    main {
+        width: 304px;
+        height: 304px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .selector {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .rate {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .submit-btn {
+        height: 40px;
+    }
+
+    .attribution {
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
