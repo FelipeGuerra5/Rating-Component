@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Roboto&display=swap');
 
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
 html {
     height: 100%;
     --Orange: hsl(25, 97%, 53%);
@@ -22,7 +30,7 @@ body{
     background-color: var(--Very-Dark-Blue);
 }
 
-main.rating {
+main {
     width: 380px;
     height: 380px;
     
@@ -39,57 +47,141 @@ main.rating {
     
     display: flex;    
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+     
     font-family: overpass;
+}
+
+main.submited {
+    justify-content: space-evenly;
+}
+
+.star {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-style: dotted;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(216, 12%, 54%, 0.150);
+    border: none;
+
 }
 
 .pic {
     margin-top: 15px;
 }
 
-
-p.rate-display {
+#rate-display {
     color: var(--Orange);
-    margin: 10px 0px 0px  0px;
+    margin: 10px 70px 0px  70px;
     background-color: hsla(216, 12%, 54%, 0.150);
     padding: 7px 20px;
     border-radius: 20px;
 }
 
 .text {
-    margin: 10px 10px;
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
 
+.text-head {
+    font-size: 35px;
+}
+
 h1 {
-    margin: 20px 0px 0px 0px;
+    margin: 5px 0px;
     color: var(--White);
 }
 
 .thanks-p {
     color: var(--Light-Grey);
-    margin: 10px 0px 150px 0px;
+    margin: 10px 10px;
     text-align: center;
     line-height: 25px;
 }
 
+p {
+    color: var(--Light-Grey);
+    margin: 5px 0px;
+}
+
+
+.selector {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rate {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: hsla(216, 12%, 54%, 0.150);
+    color: var(--Light-Grey);
+    border: none;
+    cursor: pointer;
+}
+.rate:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+    transition: 175ms;
+}
+.rate:focus {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+    transition: 175ms;
+}
+
+.submit {
+    height: 50px;
+    padding: 10px;
+    display: flex;    
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    color: var(--White);
+    background-color: var(--Orange);
+    font-family: overpass;
+    font-size: 17px;
+    border-style: none;
+}
+.submit-btn:hover {
+    color: var(--Orange);
+    background-color: var(--White);
+    transition: 150ms;
+    cursor: pointer;
+}
+
+.thanks-head {
+    margin: 20px 0px 0px 0px;
+    color: var(--White);
+    font-weight: 100;
+    font-size: 30px;
+}
+
 .attribution { 
-    font-size: 13px; text-align: center;
+    font-size: 13px; 
+    text-align: center;
     margin-top: 10px;
     color: var(--Light-Grey);
     width: 360px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .attribution a { 
     color: rgba(255, 255, 255, 0.85); 
 }
-
 
 @media screen and (max-width: 375px) and (orientation: portrait) {
         
